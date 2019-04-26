@@ -60,9 +60,16 @@
     console.log(students)
 
     for (const student of students) {
-        console.log("STUDENT", student)
+        // console.log("STUDENT", student.name)
         // <li><strong>Student</strong> 22 </li>
-        
+
+        // Creating new elements
+        const listItem = document.createElement("li")
+        const strong = document.createElement("strong")
+        strong.innerText = student.name
+        listItem.appendChild(strong)
+        console.log(listItem)
+
     }
 
 </script>
