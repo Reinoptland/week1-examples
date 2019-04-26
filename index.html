@@ -21,6 +21,7 @@
     <button onclick="changeTitle('WE HAVE CHANGED SOMETHING')"> KLIK ME </button>
     <button onclick="changeTitle('ANOTHER BUTTON')"> KLIK ME ALSO </button>
     <button onclick="deleteTitle()">Delete</button>
+    <button onclick="objectifyStudents()">Noo!</button>
 
     <ul id="studentList">
         <li><strong>Student</strong> 22 </li>
@@ -58,23 +59,24 @@
     ]
 
     console.log(students)
-
-    for (const student of students) {
-        // console.log("STUDENT", student.name)
-        // <li><strong>Student</strong> 22 </li>
-
-        // Creating new elements
-        const listItem = document.createElement("li")
-        const strong = document.createElement("strong")
-        strong.innerText = student.name
-        listItem.innerText = student.number
-        listItem.appendChild(strong)
-        console.log(listItem)
-
-        const list = document.getElementById('studentList')
-        console.log(list)
-
-        list.appendChild(listItem)
+    function objectifyStudents() {
+        for (const student of students) {
+            // console.log("STUDENT", student.name)
+            // <li><strong>Student</strong> 22 </li>
+    
+            // Creating new elements
+            const listItem = document.createElement("li")
+            const strong = document.createElement("strong")
+            strong.innerText = student.name
+            listItem.innerText = student.number
+            listItem.appendChild(strong)
+            console.log(listItem)
+    
+            const list = document.getElementById('studentList')
+            console.log(list)
+    
+            list.appendChild(listItem)
+        }
     }
 
 </script>
