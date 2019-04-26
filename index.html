@@ -20,6 +20,7 @@
     <!-- Step 5: Make button with event listener and handler, check if it does something -->
     <button onclick="changeTitle('WE HAVE CHANGED SOMETHING')"> KLIK ME </button>
     <button onclick="changeTitle('ANOTHER BUTTON')"> KLIK ME ALSO </button>
+    <button onclick="deleteTitle()">Delete</button>
 </body>
 <script>
     // Step 6: define custom event handler function, test it
@@ -30,12 +31,20 @@
 
         // Step 4: Reassign the innerText property to a different value
         console.log(title.innerText)
+        // Strategy: Reassign property of element
         title.innerText = text
 
         // const title = { tagName: 'h1', innerText: 'Hello world' }
         // console.log(title.innerText)
         // title.innerText = "WE HAVE CHANGED SOMETHING"
 
+    }
+
+    function deleteTitle() {
+        const title = document.getElementById('bigTitle')
+        console.log(title)
+        // Strategy: Call method on element
+        title.remove()
     }
 
 
