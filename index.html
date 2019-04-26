@@ -18,23 +18,26 @@
     <!-- Step 1: Make an HTML element and give it an id (for easy selection) -->
     <h1 id="bigTitle">Hello World</h1>
     <!-- Step 5: Make button with event listener and handler, check if it does something -->
-    <button onclick="changeTitle()"> KLIK ME </button>
+    <button onclick="changeTitle('WE HAVE CHANGED SOMETHING')"> KLIK ME </button>
+    <button onclick="changeTitle('ANOTHER BUTTON')"> KLIK ME ALSO </button>
 </body>
 <script>
     // Step 6: define custom event handler function, test it
     function changeTitle(text) {
-        console.log('TESTING')
+
+        // Step 3: Select element and assign to a variable
+        const title = document.getElementById('bigTitle')
+
+        // Step 4: Reassign the innerText property to a different value
+        console.log(title.innerText)
+        title.innerText = text
+
+        // const title = { tagName: 'h1', innerText: 'Hello world' }
+        // console.log(title.innerText)
+        // title.innerText = "WE HAVE CHANGED SOMETHING"
+
     }
 
-    // Step 3: Select element and assign to a variable
-    const title = document.getElementById('bigTitle')
 
-    // Step 4: Reassign the innerText property to a different value
-    console.log(title.innerText)
-    title.innerText = "WE HAVE CHANGED SOMETHING"
-    
-    // const title = { tagName: 'h1', innerText: 'Hello world' }
-    // console.log(title.innerText)
-    // title.innerText = "WE HAVE CHANGED SOMETHING"
 </script>
 </html>
