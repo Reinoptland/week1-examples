@@ -22,7 +22,7 @@
     <button onclick="changeTitle('ANOTHER BUTTON')"> KLIK ME ALSO </button>
     <button onclick="deleteTitle()">Delete</button>
 
-    <ul>
+    <ul id="studentList">
         <li><strong>Student</strong> 22 </li>
     </ul>
 </body>
@@ -70,6 +70,8 @@
         listItem.appendChild(strong)
         console.log(listItem)
 
+        const list = document.getElementById('studentList')
+        console.log(list)
     }
 
 </script>
