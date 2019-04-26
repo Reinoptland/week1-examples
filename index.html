@@ -21,7 +21,7 @@
     <button onclick="changeTitle('WE HAVE CHANGED SOMETHING')"> KLIK ME </button>
     <button onclick="changeTitle('ANOTHER BUTTON')"> KLIK ME ALSO </button>
     <button onclick="deleteTitle()">Delete</button>
-    <button onclick="objectifyStudents()">Noo!</button>
+    <button onclick="objectifyStudents(students)">Noo!</button>
 
     <ul id="studentList">
         <li><strong>Student</strong> 22 </li>
@@ -58,9 +58,8 @@
         { name: "Pieter", number: 253 },
     ]
 
-    console.log(students)
-    function objectifyStudents() {
-        for (const student of students) {
+    function objectifyStudents(arrayOfStudents) {
+        for (const student of arrayOfStudents) {
             // console.log("STUDENT", student.name)
             // <li><strong>Student</strong> 22 </li>
     
